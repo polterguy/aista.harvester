@@ -46,4 +46,7 @@ The system should be implemented using the following technologies and constructs
 4. The system needs to be responsive, implying it works on devices such as cell phones, tablets, etc.
 5. Besides from Angular and Material, and the fact that the system needs to be responsive, the system doesn't need much design elements, as long as fonts, font size, and other layout parts can be easily configured. Make sure it's tested for all resolutions.
 
+## Rough sketch of system
+
+![Whiteboard](https://raw.githubusercontent.com/polterguy/aista.harvester/master/resources/whiteboard.jpg)
 
