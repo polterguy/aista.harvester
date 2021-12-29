@@ -1,0 +1,91 @@
+$defaultFontSize: 2vw;
+$defaultPageHeight: 100vh;
+$defaultHeadingSize: 4vw;
+$defaultFontStyle: 'Ubuntu', sans-serif;
+$defaultMarginAndPadding: 1vw;
+$countdownBackgroundColor: rgba(235, 239, 243, 0.5);
+
+
+@mixin centerContentHorizontally(){
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin backgroundSpecifications(){
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("https://cdn.pixabay.com/photo/2020/03/09/15/59/scifi-4916165_960_720.jpg");
+}
+
+@mixin centerContentHorizontallyAndVertically(){
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin centerTexts(){
+
+    display: block;
+    text-align: center;
+}
+
+body{
+    font-family: $defaultFontStyle;
+}
+
+h1{
+    @include centerTexts();
+    font-size: $defaultHeadingSize;
+    color: white;
+    padding: $defaultMarginAndPadding;
+}
+
+.centerContent{
+    @include centerContentHorizontally();
+}
+
+i{
+    @include centerTexts();
+    font-size: $defaultFontSize;
+    background-color: rgba(0,0,0,0.7);
+    color: white
+}
+
+.headerPage{
+    min-height: $defaultPageHeight;
+    @include centerContentHorizontallyAndVertically();
+    @include backgroundSpecifications();
+    flex-direction: column;
+}
+
+img {
+    box-shadow: 1vw 1vw 1vw rgb(207, 183, 183);
+    width: 20vw;
+}
+
+.countdownDiv{
+    @include centerContentHorizontally();
+    flex-direction: row;
+    font-size: $defaultFontSize;
+    margin: $defaultMarginAndPadding;
+    margin-top: 2vw;
+    padding: $defaultMarginAndPadding;
+    background-color: $countdownBackgroundColor;
+    border: 0.5vw solid rgb(0, 217, 255);
+    border-radius: 0.5vw;
+    color: white;
+}
+
+.daysCounter, .hoursCounter, .minutesCounter, .secondsCounter{
+    border: 0.5vw solid blue;
+    padding: $defaultMarginAndPadding;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+}
