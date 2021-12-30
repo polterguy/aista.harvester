@@ -1,0 +1,134 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  font-size: 4vw;
+  color: white;
+  padding: 1vw;
+}
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+i {
+  display: block;
+  text-align: center;
+  font-size: 2vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.headerPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("https://cdn.pixabay.com/photo/2020/03/09/15/59/scifi-4916165_960_720.jpg");
+  flex-direction: column;
+}
+
+img {
+  box-shadow: 1vw 1vw 1vw #cfb7b7;
+  width: 20vw;
+}
+
+.countdownDiv {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 2vw;
+  margin: 1vw;
+  margin-top: 2vw;
+  padding: 1vw;
+  background-color: rgba(235, 239, 243, 0.5);
+  border: 0.5vw solid #00d9ff;
+  border-radius: 0.5vw;
+  color: white;
+}
+
+.daysCounter, .hoursCounter, .minutesCounter, .secondsCounter {
+  border: 0.5vw solid blue;
+  padding: 1vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.formPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-image: url("https://cdn.pixabay.com/photo/2020/03/09/15/59/scifi-4916165_960_720.jpg");
+  flex-direction: column;
+  background-image: url("https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_960_720.png");
+}
+
+h1 {
+  color: black;
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+form label {
+  font-size: 2vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 1vw;
+  margin: 1vw;
+}
+form input {
+  font-size: 2vw;
+  padding: 0.3vw;
+  margin: 0.5vw;
+  border: 0.5vw solid green;
+  border-color: transparent;
+  width: 100%;
+  transition: all;
+  transition-duration: 0.5s;
+}
+form input:focus {
+  border: 0.5vw solid #065ee2;
+  width: 100%;
+}
+form button {
+  transition: all;
+  transition-duration: 0.5s;
+  padding: 1vw;
+  font-size: 1.5vw;
+  border: 0.2vw solid blue;
+  border-radius: 0.5vw;
+  background-color: rgba(255, 230, 0, 0.8);
+}
+form button:hover {
+  background-color: rgba(224, 223, 206, 0.9);
+  border: 0.2vw solid #08c3f1;
+  font-weight: 700;
+}
+form .checkboxLabel {
+  font-size: 1.5vw;
+  width: 100%;
+  display: block;
+}
+form input[type=checkbox] {
+  width: 2vw;
+  height: 2vw;
+  margin-top: 2vw;
+}
+
+/*# sourceMappingURL=form-page.component.css.map */
