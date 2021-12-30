@@ -6,42 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  
-  eventDate = new Date("2022 june 15");
-  currentDate = new Date();
+  // countDown() {
 
-  timeLeftInMilliSeconds = this.eventDate.getTime() - this.currentDate.getTime();
-  
-  daysLeft = this.timeLeftInMilliSeconds / (60 * 60 * 1000 * 24) + " days";
-  hoursLeft = (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 + " hours";
-  minutesLeft = (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 * 60 + " minutes";
-  secondsLeft = (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 * 60 * 60 + " seconds";
+  daysLeft = 1;
+  hoursLeft = 1;
+  minutesLeft = 1;
+  secondsLeft = 1;
 
+  // };
 
-
-  constructor() { };
+  constructor() {}
 
   ngOnInit(): void {
+    setInterval(() => {
+      let releaseDate = new Date('June 15, 2022 00:00:00').getTime();
+      let today = new Date().getTime();
 
-    let updateTime = () => {
+      let timeLeft = releaseDate - today; // in milliseconds
 
-      setInterval(() => {
-      let eventDate = new Date('2022 june 15');
-      let currentDate = new Date();
-
-      let timeLeftInMilliSeconds =
-        this.eventDate.getTime() - this.currentDate.getTime();
-
-      let daysLeft = this.timeLeftInMilliSeconds / (60 * 60 * 1000 * 24) + ' days';
-      let hoursLeft =
-        (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 + ' hours';
-      let minutesLeft =
-        (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 * 60 +
-        ' minutes';
-      let secondsLeft =
-        (this.timeLeftInMilliSeconds % (60 * 60 * 1000 * 24)) * 24 * 60 * 60 +
-        ' seconds';}, 1000) 
-    }
-    updateTime();
+      this.daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      this.hoursLeft = Math.floor((timeLeft%(1000*60*60*24))/(1000*60*60));
+      this.minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000*60));
+      this.secondsLeft = Math.floor((timeLeft % (1000 * 60)) / (1000));
+    }, 1000);
   }
 }
