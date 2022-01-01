@@ -9,11 +9,16 @@
 
   input {
     margin-left: 1vw;
+    font-size: 1.5vw;
     margin: 0.5vw;
   }
-
-  button{
-    padding: 0.5vw;
-    background-color: greenyellow
+  label {
+    font-size: 1.5vw;
   }
-};
+
+  button {
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    background-color: greenyellow;
+  }
+}
