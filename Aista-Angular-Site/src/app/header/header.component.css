@@ -1,68 +1,40 @@
-body {
-  font-family: "Ubuntu", sans-serif;
-}
-
 h1 {
-  display: block;
-  text-align: center;
   font-size: 4vw;
-  color: white;
-  padding: 1vw;
+  margin-top: 0;
 }
 
-.centerContent {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-i {
-  display: block;
+h2 {
+  font-size: 2.5vw;
   text-align: center;
-  font-size: 2vw;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-}
-
-.headerPage {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-image: url("https://cdn.pixabay.com/photo/2020/03/09/15/59/scifi-4916165_960_720.jpg");
-  flex-direction: column;
 }
 
 img {
-  box-shadow: 1vw 1vw 1vw #cfb7b7;
-  width: 20vw;
+  height: 4vw;
+  padding-right: 1vw;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
 }
 
 .countdownDiv {
+  background-color: aqua;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  align-items: center;
   font-size: 2vw;
-  margin: 1vw;
-  margin-top: 2vw;
   padding: 1vw;
-  background-color: rgba(235, 239, 243, 0.5);
-  border: 0.5vw solid #00d9ff;
-  border-radius: 0.5vw;
-  color: white;
+}
+.countdownDiv .countdownItems {
+  background-color: aliceblue;
+  padding: 1vw;
+  border: 0.5vw solid #f8c10d;
 }
 
-.daysCounter, .hoursCounter, .minutesCounter, .secondsCounter {
-  border: 0.5vw solid blue;
-  padding: 1vw;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
+.toGo {
+  margin-left: 1vw;
 }
 
 /*# sourceMappingURL=header.component.css.map */

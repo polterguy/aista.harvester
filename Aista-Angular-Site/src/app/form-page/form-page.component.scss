@@ -1,67 +1,19 @@
-@use '../header/header.component.scss' as headerPageStyles;
+@use "../header/header.component.scss" as headerPageStyles;
 
-@mixin transitionProperties(){
+.formDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5vw;
+  font-size: 1.5vw;
 
-    transition: all;
-    transition-duration: 0.5s;
-}
+  input {
+    margin-left: 1vw;
+    margin: 0.5vw;
+  }
 
-.formPage{
-    min-height: headerPageStyles.$defaultPageHeight;
-    @include headerPageStyles.centerContentHorizontallyAndVertically();
-    @include headerPageStyles.backgroundSpecifications();
-    flex-direction: column;
-    background-image: url("https://cdn.pixabay.com/photo/2018/03/22/02/37/email-3249062_960_720.png");
-}
-
-h1{
-    color: black;
-    background-color: rgba(240, 248, 255, 0.5);
-}
-
-form{
-
-    label{
-        font-size: headerPageStyles.$defaultFontSize;
-        background-color: rgba(0,0,0,0.5);
-        color: white;
-        padding: 1vw;
-        margin: 1vw;
-    }
-    input{
-        font-size: headerPageStyles.$defaultFontSize;
-        padding: 0.3vw;
-        margin: 0.5vw;
-        border: 0.5vw solid green;
-        border-color: transparent;
-        width: 100%;
-        @include transitionProperties();
-    }
-    input:focus{
-        border: 0.5vw solid rgb(6, 94, 226);
-        width: 100%;
-    }
-    button{
-        @include transitionProperties();
-        padding: 1vw;
-        font-size: (headerPageStyles.$defaultFontSize)-0.5vw;
-        border: 0.2vw solid blue;
-        border-radius: 0.5vw;
-        background-color: rgba(255, 230, 0, 0.8);
-    }
-    button:hover{
-        background-color: rgba(224, 223, 206, 0.9);
-        border: 0.2vw solid rgb(8, 195, 241);
-        font-weight: 700;
-    }
-    .checkboxLabel{
-        font-size: (headerPageStyles.$defaultFontSize)-0.5vw;
-        width: 100%;
-        display:block;
-    }
-    input[type = "checkbox"]{
-        width: headerPageStyles.$defaultFontSize;
-        height: headerPageStyles.$defaultFontSize;
-        margin-top: 2vw;
-    }
-}
+  button{
+    padding: 0.5vw;
+    background-color: greenyellow
+  }
+};

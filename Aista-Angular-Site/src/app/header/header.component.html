@@ -1,26 +1,16 @@
-<!-- Including google fonts Ubuntu -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-  rel="stylesheet"
-/>
-
-<div class="headerPage">
+<div class="headerSection">
+  <img
+    src="https://github.com/Sam-Varghese/aista.harvester/blob/279d417dfa85a4ea7e9a6c1789125b1404514172/Aista-Angular-Site/src/assets/images/aistaLogo.jpg?raw=true"
+    alt="Logo"
+  />
   <h1>Aista</h1>
-
-  <i>Where the Machine creates the Code</i>
-
-  <br />
-
-  <div style="display: flex; justify-content: center">
-    <img src="../../assets/images/aistaLogo.jpg" alt="" />
-  </div>
-
-  <div class="countdownDiv">
-    <div class="daysCounter">{{daysLeft}}</div>
-    <div class="hoursCounter">{{hoursLeft}}</div>
-    <div class="minutesCounter">{{minutesLeft}}</div>
-    <div class="secondsCounter" id="secondsCounters">{{ secondsLeft }}</div>
-  </div>
 </div>
+
+<div class="countdownDiv">
+  <div class="countdownItems">{{daysLeft}} days</div>
+  <div class="countdownItems">{{hoursLeft}} hours</div>
+  <div class="countdownItems">{{minutesLeft}} minutes</div>
+  <div class="countdownItems">{{secondsLeft}} seconds</div>
+  <span class="toGo">to go...</span>
+</div>
+<h2>Subscribe</h2>
