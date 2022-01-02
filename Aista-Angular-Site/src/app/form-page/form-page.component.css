@@ -1,73 +1,86 @@
 h1 {
-  font-size: 4vw;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 2.5vw;
   text-align: center;
+  margin-top: 2vw;
+  font-size: 2.5vw;
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 5vw;
+  }
 }
 
-img {
-  height: 4vw;
-  padding-right: 1vw;
+.formStyle {
+  width: 70%;
 }
-
-.headerSection {
-  display: flex;
-  justify-content: center;
-  padding: 1vw;
+@media screen and (max-width: 500px) {
+  .formStyle {
+    width: 100%;
+  }
 }
-
-.countdownDiv {
-  background-color: aqua;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2vw;
-  padding: 1vw;
-}
-.countdownDiv .countdownItems {
-  background-color: aliceblue;
-  padding: 1vw;
-  border: 0.5vw solid #f8c10d;
-}
-
-.toGo {
-  margin-left: 1vw;
+@media screen and (max-width: 600px) {
+  .formStyle {
+    width: 100%;
+  }
 }
 
 .formDiv {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  font-size: 1.5vw;
-}
-.formDiv input {
-  margin-left: 1vw;
-  padding: 0.5vw;
-  margin: 0.5vw;
+  justify-content: center;
 }
 
-.formDiv {
+.mat-form-field {
+  font-size: 1.5vw;
+  margin: 1vw;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  padding: 0.5vw;
+  justify-content: center;
+}
+@media screen and (max-width: 500px) {
+  .mat-form-field {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mat-form-field {
+    font-size: 2vw;
+  }
+}
+
+.mat-checkbox {
+  margin: 1vw;
   font-size: 1.5vw;
 }
-.formDiv input {
-  margin-left: 1vw;
-  font-size: 1.5vw;
-  margin: 0.5vw;
+@media screen and (max-width: 500px) {
+  .mat-checkbox {
+    font-size: 3vw;
+  }
 }
-.formDiv label {
+@media screen and (max-width: 600px) {
+  .mat-checkbox {
+    font-size: 2vw;
+  }
+}
+
+.mat-button {
+  border: 0.1vw solid black;
+  margin: 1vw;
   font-size: 1.5vw;
 }
-.formDiv button {
-  padding: 0.5vw;
-  font-size: 1.5vw;
-  background-color: greenyellow;
+@media screen and (max-width: 500px) {
+  .mat-button {
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mat-button {
+    font-size: 2vw;
+  }
 }
 
 /*# sourceMappingURL=form-page.component.css.map */

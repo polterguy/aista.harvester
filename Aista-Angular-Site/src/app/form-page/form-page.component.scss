@@ -1,24 +1,76 @@
-@use "../header/header.component.scss" as headerPageStyles;
+@mixin centerAlign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+$defaultFontSize: 1.5vw;
+$defaultInputWidth: 30%;
+
+@mixin setFontSize($defaultFontSize) {
+  font-size: $defaultFontSize;
+}
+
+@mixin setInputWidth($defaultInputWidth) {
+  width: $defaultInputWidth;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2vw;
+  font-size: $defaultFontSize + 1vw;
+  @media screen and (max-width: 500px) {
+    @include setFontSize($defaultFontSize: 4vw);
+  }
+  @media screen and (max-width: 600px) {
+    @include setFontSize($defaultFontSize: 5vw);
+  }
+}
+.formStyle {
+  width: 70%;
+  @media screen and (max-width: 500px) {
+    @include setInputWidth($defaultInputWidth: 100%);
+  }
+  @media screen and (max-width: 600px) {
+    @include setInputWidth($defaultInputWidth: 100%);
+  }
+}
 
 .formDiv {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0.5vw;
-  font-size: 1.5vw;
+  @include centerAlign();
+}
 
-  input {
-    margin-left: 1vw;
-    font-size: 1.5vw;
-    margin: 0.5vw;
+.mat-form-field {
+  font-size: $defaultFontSize;
+  margin: 1vw;
+  @include centerAlign();
+  @media screen and (max-width: 500px) {
+    @include setFontSize($defaultFontSize: 3vw);
   }
-  label {
-    font-size: 1.5vw;
+  @media screen and (max-width: 600px) {
+    @include setFontSize($defaultFontSize: 2vw);
   }
+}
 
-  button {
-    padding: 0.5vw;
-    font-size: 1.5vw;
-    background-color: greenyellow;
+.mat-checkbox {
+  margin: 1vw;
+  font-size: $defaultFontSize;
+  @media screen and (max-width: 500px) {
+    @include setFontSize($defaultFontSize: 3vw);
+  }
+  @media screen and (max-width: 600px) {
+    @include setFontSize($defaultFontSize: 2vw);
+  }
+}
+
+.mat-button {
+  border: 0.1vw solid black;
+  margin: 1vw;
+  font-size: $defaultFontSize;
+  @media screen and (max-width: 500px) {
+    @include setFontSize($defaultFontSize: 3vw);
+  }
+  @media screen and (max-width: 600px) {
+    @include setFontSize($defaultFontSize: 2vw);
   }
 }
