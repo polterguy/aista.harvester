@@ -25,9 +25,24 @@ export class HeaderComponent implements OnInit {
       let timeLeft = releaseDate - today; // in milliseconds
 
       this.daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      this.hoursLeft = Math.floor((timeLeft%(1000*60*60*24))/(1000*60*60));
-      this.minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000*60));
-      this.secondsLeft = Math.floor((timeLeft % (1000 * 60)) / (1000));
+      this.hoursLeft = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      this.minutesLeft = Math.floor(
+        (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+      );
+      this.secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
     }, 1000);
+
+    function playAudio(){
+        let audio = new Audio();
+        audio.src = "../../assets/audio/ticker.wav";
+        audio.load();
+        audio.play();
+    };
+
+    playAudio();
+    setInterval(playAudio, 12000);
   }
 }

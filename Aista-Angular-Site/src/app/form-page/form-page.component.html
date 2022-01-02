@@ -1,19 +1,17 @@
-  <form action="" class = "formDiv">
-    <label for="subscriberName">Name: </label>
-    <input
-      type="text"
-      id="subscriberName"
-      name="subscriberName"
-      placeholder="Your name"
-    />
+<h1>Subscribe</h1>
+<div class="formDiv">
+  <form action="">
+    <mat-form-field class="formStyle">
+      <mat-label>Name: </mat-label>
+      <input matInput placeholder="Your name" />
+    </mat-form-field>
+    <mat-form-field class="formStyle">
+      <mat-label>Email: </mat-label>
+      <input matInput placeholder="Your email id" type="email" />
+    </mat-form-field>
+    <mat-checkbox>I subscribe to Aista newsletters.</mat-checkbox>
     <br />
-    <label for="subscriberEmailId">Mail id: </label>
-    <input
-      type="email"
-      id="subscriberEmailId"
-      name="subscriberEmailId"
-      placeholder="Your mail id"
-    />
     <br />
-    <button type="submit">Submit</button>
+    <button mat-button color="primary">Submit</button>
   </form>
+</div>
