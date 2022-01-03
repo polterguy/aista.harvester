@@ -8,7 +8,7 @@ export class SubscriptionService {
 
   constructor(private httpClient: HttpClient) { }
   
-  postFormDetails(data) {
+  postFormDetails(data:any) {
     return this.httpClient.post(
       'https://api.servergardens.com/magic/modules/bazar/subscribe', data
     );
