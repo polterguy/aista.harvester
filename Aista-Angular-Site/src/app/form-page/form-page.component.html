@@ -1,17 +1,18 @@
 <h1>Subscribe</h1>
 <div class="formDiv">
-  <form action="">
+  <form action="POST" #userSubscription = "ngForm" (ngSubmit) = "onClickSubmit(userSubscription.value)" >
     <mat-form-field class="formStyle">
       <mat-label>Name: </mat-label>
-      <input matInput required autofocus/>
+      <input matInput required autofocus ngModel name = "subscriberName" id = "subscriberName"/>
     </mat-form-field>
     <mat-form-field class="formStyle">
       <mat-label>Email: </mat-label>
-      <input matInput type="email" required/>
+      <input matInput type="email" required ngModel name = "subscriberEmail" id = "subscriberEmail"/>
     </mat-form-field>
-    <mat-checkbox>I subscribe to Aista newsletters.</mat-checkbox>
+    <mat-checkbox id = "subscribersApproval">I subscribe to Aista newsletters.</mat-checkbox>
     <br />
     <br />
-    <button mat-button color="primary">Submit</button>
+    <!-- <button type = "submit" mat-button color="primary" (click)="makePostRequest()" type = "submit">Submit</button> -->
+    <input type="submit" value="Submit">
   </form>
 </div>
